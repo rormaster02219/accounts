@@ -7,13 +7,15 @@
     React.DOM.form
       className: 'form-group'
       onSubmit: @handleSubmit
-      React.DOM.input
-        type: 'text'
-        className: 'form-control'
-        placeholder: 'Date'
-        name: 'date'
-        value: @state.date
-        onChange: @handleChange
+      React.DOM.div
+        className: 'form-group'
+        React.DOM.input
+          type: 'text'
+          className: 'form-control'
+          placeholder: 'Date'
+          name: 'date'
+          value: @state.date
+          onChange: @handleChange
       React.DOM.div
         className: 'form-group'
         React.DOM.input
