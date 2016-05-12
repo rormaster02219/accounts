@@ -3,9 +3,10 @@
     '$' + amount
   handleDelete:(e) ->
     e.preventDefault()
+    console.log(@props)
     $.ajax
       method: 'DELETE'
-      url: '/records/#{ @props.record.id }'
+      url: '/records/' + @props.record.id
       dataType: 'JSON'
       success: () =>
         @props.handleDeleteRecord @props.record
